@@ -12,7 +12,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                raleway: ["Raleway", "sans-serif"],
             },
             backgroundImage: {
                 "feature-graphic": "url('/img/Feature Graphic.jpg')",

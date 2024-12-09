@@ -19,14 +19,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $menus = [
-            ['name' => 'Home', 'url' => '/'],
-            ['name'=> 'About Us','url'=> '/about'],
-            ['name'=> 'Why us ','url'=> '/contact'],
-            ['name'=> 'Our Service','url'=> '/contact'],
-            ['name'=> 'Portofolio ','url'=> '/contact'],
-            ['name'=> 'Contact Us ','url'=> '/contact'],
-        ];
-        view()->share('menus', $menus);
+        // $menus = [
+        //     ['name' => 'home', 'url' => '/'],
+        //     ['name'=> 'about us','url'=> '/about'],
+        //     ['name'=> 'why us ','url'=> '/contact'],
+        //     ['name'=> 'our service','url'=> '/contact'],
+        //     ['name'=> 'portofolio ','url'=> '/contact'],
+        //     ['name'=> 'contact us ','url'=> '/contact'],
+        // ];
+        // view()->share('menus', $menus);
     }
 }

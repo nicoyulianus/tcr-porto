@@ -20,7 +20,7 @@
     </div>
     <div class="md:mx-10 mx-3 max-w-[1320px] lg:mx-20 2xl:mx-auto">
       <div class="flex flex-col justify-between my-20 md:flex-row">
-        <div class="flex flex-col items-center justify-center mb-5 md:mb-0">
+        <div class="flex flex-col items-center justify-center mb-5 md:justify-start md:mb-0">
           <div class="w-[218px] mb-5">
             <img
               src="img/Logo TCR.png"
@@ -34,7 +34,7 @@
             <img src="img/Badge (1).png" alt="" class="w-[96px] h-[32px]" />
           </div>
         </div>
-        <div class=" md:ml-20">
+        <div class="p-2 mt-10 md:ml-20 md:mt-0 md:p-0">
           <h1
             style="color: rgba(50, 50, 50, 1)"
             class="text-2xl font-extrabold text-center md:text-5xl md:text-left"
