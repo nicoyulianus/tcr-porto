@@ -1,4 +1,15 @@
-<nav class="flex justify-between p-2 md:px-10 md:py-3">
+@php
+  $data = [
+    ['name' => 'home', 'url' => '/'],
+    ['name'=> 'about us','url'=> '/about'],
+    ['name'=> 'why us ','url'=> '/contact'],
+    ['name'=> 'our service','url'=> '/service'],
+    ['name'=> 'portfolio ','url'=> '/portfolio'],
+    ['name'=> 'contact us ','url'=> '/contact'],
+  ];
+@endphp
+<nav>
+  <div class="flex justify-between p-2 md:px-10 md:py-3">
       <div class="md:w-[112px] w-[90px] p-2 flex items-center">
         <img
           src="./img/Savin Logo-01 3.png"
@@ -22,10 +33,10 @@
         <button class="text-[9px] md:text-base font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-black">{{$resData['name']}}</button>
         @endforeach
       </div>
-    </nav>
+    </div>
     <div
       id="mobile-menu"
-      class="fixed top-0 left-0 z-50 w-64 h-full text-black transition-transform duration-300 transform -translate-x-full bg-white"
+      class="fixed top-0 left-0 z-50 w-64 h-full text-black transition-transform duration-300 transform -translate-x-full bg-white shadow-xl"
     >
       <div class="flex items-center justify-between p-4">
         <h2 class="text-lg font-bold text-center">Menu</h2>
@@ -36,12 +47,28 @@
         X
         </button>
       </div>
-      <div class="flex flex-col gap-3 px-4">
+      <div class="flex flex-col items-center justify-center gap-3 px-4">
         @foreach ($data as $resData)
         <button class="text-sm font-semibold text-left transition-all duration-300 border-b-2 border-transparent hover:border-black">
           {{$resData['name']}}
         </button>
-
         @endforeach
       </div>
-    </div>
+  </div>
+</nav>
+
+ @push('scripts')
+  <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const menuClose = document.getElementById("menu-close");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.remove("-translate-x-full");
+      });
+
+      menuClose.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-x-full");
+      });
+  </script>
+ @endpush
